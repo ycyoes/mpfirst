@@ -44,6 +44,25 @@ App({
     console.log('App onHide')
   },
 
+  getUserInfo: function(cb) {
+      var that = this;
+      if(this.globalData.userInfo) {
+        typeof cb == "function" && cb(this.globalData.userInfo)
+      } else {
+        //调用登陆接口
+        wx.login({
+          complete: (res) => {
+            wx.getUserInfo({
+              complete: (res) => {
+                that.globalData.userInfo = res.userInfo
+                typeof cb == "function" && cb(that.globalData.userInfo)
+              },
+            })
+          },
+        })
+      }
+  },
+
   globalData: {
     userInfo: null
   }
