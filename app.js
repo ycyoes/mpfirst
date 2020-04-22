@@ -10,6 +10,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log('res: ', res)
       }
     })
     // 获取用户信息
@@ -33,6 +34,16 @@ App({
       }
     })
   },
+  onShow: function() {
+      //小程序启动或从后台进入到前台时，执行该操作
+      console.log('App onShow')
+  },
+
+  onHide: function() {
+    //小程序从前台进入后台时，执行该操作
+    console.log('App onHide')
+  },
+
   globalData: {
     userInfo: null
   }
