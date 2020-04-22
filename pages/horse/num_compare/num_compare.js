@@ -95,12 +95,8 @@ Page({
   },
 
   change3: function(e) {
-    console.log('change3: ', e)
     var data = {}
     data[e.target.dataset.id] = Number(e.detail.value)
-    console.log('e.target.dataset.id: ', e.target.dataset.id)
-    console.log('e.detail.value: ', e.detail.value)
-    console.log('data: ', data, Number('23'), ' ', Number(e.detail.value))
     this.setData(data)
   }
 })
