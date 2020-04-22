@@ -1,6 +1,12 @@
 //app.js
 App({
-  onLaunch: function () {
+  //生命周期回调-监听小程序初始化
+
+  //小程序初始化完成时触发（全局只触发一次）
+  onLaunch: function (options) {
+    console.log('onLaunch执行')
+    console.log('onLaunch-options: ', options)
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -61,6 +67,10 @@ App({
           },
         })
       }
+  },
+
+  globalFunction: function() {
+    console.log('----全局函数-----')
   },
 
   globalData: {
