@@ -1,0 +1,33 @@
+<form bindsubmit="formCompare">
+  <view style="margin: 50rpx">
+  <text>请输入第1个数字：</text>
+  <!-- <input type="number" name="num1" bindchange="num1change"/> -->
+  <!-- <input type="number" id="num1" bindchange="change"/> -->
+  <input type="number" name="num1" bindchange="change3" data-id="num1" />
+  </view>
+  <view>
+    <text>请输入第2个数字：</text>
+    <!-- <input type="number" name="num2" bindchange="num2change"/> -->
+    <!-- <input type="number" id="num2" bindchange="change"/> -->
+    <input type="number" name="num2" bindchange="change3" data-id="num2" />
+  </view>
+  <button form-type="submit">比较</button>
+</form>
+<view>
+  <!-- <text>比较结果：{{result}}</text> -->
+  <text>比较结果：{{num1 > num2 ? '第1个数大' : (num1 < num2 ? '第2个数大' : '两数相等')}}</text>
+</view>
+
+<view bindtap="viewtap" id="outer">
+  outer
+  <view id="inner">inner</view>
+</view>
+
+<view bindtap="outertap" id="outer">
+  outer
+  <!-- catch阻止事件冒泡 -->
+  <view catchtap="middletap" id="middle">
+    middle
+      <view bindtap="innertap" id="inner">inner</view>
+    </view>
+</view>
