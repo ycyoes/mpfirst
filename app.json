@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/horse/num_compare/num_compare"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -11,5 +12,6 @@
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "debug": true
 }
