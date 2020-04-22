@@ -44,6 +44,20 @@ Page({
       })
     }
   },
+  
+  //页面渲染完成自动跳转到指定页面
+  onReady: function() {
+    wx.navigateTo({
+      url: '../horse/num_compare/num_compare?num1=1&num2=2',
+    })
+  },
+
+  navigateTo: function() {
+    console.log('-- 跳转到数字比较页面 --')
+      wx.navigateTo({
+        url: '../horse/num_compare/num_compare',
+      })
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
