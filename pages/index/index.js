@@ -48,7 +48,9 @@ Page({
   //页面渲染完成自动跳转到指定页面
   onReady: function() {
     wx.navigateTo({
-      url: '../horse/num_compare/num_compare?num1=1&num2=2',
+      // url: '../horse/num_compare/num_compare?num1=1&num2=2',
+      //url: '../horse/wenjuan/wenjuan',
+      url: '../horse/calc/calc',
     })
   },
 
