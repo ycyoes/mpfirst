@@ -1,12 +1,12 @@
 {
   "pages":[
-    "pages/horse/calc/test/test",
     "pages/index/index",
     "pages/logs/logs",
     "pages/map/map",
     "pages/horse/num_compare/num_compare",
     "pages/horse/wenjuan/wenjuan",
-    "pages/horse/calc/calc"
+    "pages/horse/calc/calc",
+    "pages/horse/calc/test/test"
   ],
   "window":{
     "backgroundTextStyle":"light",
