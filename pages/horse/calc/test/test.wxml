@@ -8,3 +8,5 @@
 <view>裁剪模式测试</view>
 <image style="width:200px;height:200px;background-color:#eee" 
   mode="top" src="../../../images/test.jpg"></image>
+
+<slider bindchanging="sliderChanging" show-value></slider>
